@@ -26,6 +26,9 @@ print("- colunas (preview) -")
 print(df.columns.tolist())
 print("-" * 40 + "\n")
 
+print("- Análise Univariada dos atributos\n")
+df.describe()
+
 # identificação de colunas que deveriam ser inteiros mas estão como string
 object_cols = df.select_dtypes(include='object').columns
 print("Colunas do tipo object (amostra):", list(object_cols)[:10])
